@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { makeStyles, Box } from '@material-ui/core';
 import Entry from '../entry';
 import EntryTextArea from '../entry-text-area';
@@ -59,6 +59,14 @@ const useStyles = makeStyles((theme) => {
 
 const DiaryContent: React.FC = () => {
   const classes = useStyles();
+  const messagesEndRef = useRef<HTMLDivElement>(document.createElement("div"));
+  const scrollToBottom = () => {
+    if (messagesEndRef === null) return;
+    messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+  };
+  useEffect(() => {
+    scrollToBottom()
+  });
   return (
     <div className={classes.root}>
       <Box className={classes.container}>
@@ -78,6 +86,7 @@ const DiaryContent: React.FC = () => {
             <EntryTextArea />
             <EntryTextArea />
           </Box>
+          <div ref={messagesEndRef} />
         </Box>
         <Box className={classes.scrollField}>
         </Box>
