@@ -1,5 +1,5 @@
 import React from 'react';
-import MainHeader from './components/main-header.tsx';
+import MainHeader from './components/main-header';
 import DiaryContent from './components/diary-content';
 import ThemesContent from './components/themes-content';
 import { makeStyles } from '@material-ui/core';

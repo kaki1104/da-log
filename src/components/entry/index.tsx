@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => {
       background: `#FFFFFF;`,
       borderRadius: '24px 24px 24px 0px',
       padding: '24px',
+      boxShadow: '-10px 10px 4px rgba(0, 0, 0, 0.25)',
     },
     rightRoot: {
       width: '330px',
