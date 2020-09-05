@@ -1,8 +1,9 @@
 import React from 'react';
-import { makeStyles, Box, IconButton, Tabs, Tab } from '@material-ui/core';
+import { makeStyles, Box, IconButton, Tabs, Tab, SvgIcon } from '@material-ui/core';
 import SettingsIcon from '@material-ui/icons/Settings';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { monthNames } from '../../constants';
+import JazzuIcon from '../../icons/jazzu-icon';
 
 type Props = {
   tabValue: number;
@@ -20,6 +21,10 @@ const useStyles = makeStyles((theme) => {
     },
     settingsButton: {
       margin: '20px'
+    },
+    jazzuButton: {
+      width: '5px',
+      height: '5px',
     },
     tab: {
       margin: '0px 20px 0px 40px',
@@ -50,6 +55,10 @@ const MainHeader: React.FC<Props> = ({ tabValue, setTabValue }: Props) => {
       <IconButton className={classes.settingsButton}>
         <SettingsIcon />
       </IconButton>
+      {/* <SvgIcon className={classes.jazzuButton}> 
+        <JazzuIcon />
+      </SvgIcon> */}
+      <img className={classes.jazzuButton} src='../../icons/jazzu-icon/jazzu.png' alt='jazzu'/>
       <Tabs className={classes.tab} value={tabValue} onChange={handleChange} centered>
         <Tab label="rappu" />
         <Tab label="jazzu" />
