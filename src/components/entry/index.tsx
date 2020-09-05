@@ -8,20 +8,22 @@ type Props = {
 const useStyles = makeStyles((theme) => {
   return {
     leftRoot: {
-      width: '330px',
+      width: '300px',
       height: '200px',
       background: `#FFFFFF;`,
-      borderRadius: '24px 24px 24px 0px',
+      borderRadius: '36px 36px 36px 0px',
       padding: '24px',
       boxShadow: '-10px 10px 4px rgba(0, 0, 0, 0.25)',
+      overflowY: 'scroll',
     },
     rightRoot: {
-      width: '330px',
+      width: '300px',
       height: '200px',
       background: `#FFFFFF;`,
-      borderRadius: '24px 24px 0px 24px',
+      borderRadius: '36px 36px 0px 36px',
       padding: '24px',
       boxShadow: '-10px 10px 4px rgba(0, 0, 0, 0.25)',
+      overflowY: 'scroll',
     }
   };
 });

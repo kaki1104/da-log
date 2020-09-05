@@ -59,9 +59,9 @@ const MainHeader: React.FC<Props> = ({ tabValue, setTabValue }: Props) => {
       <IconButton className={classes.settingsButton}>
         <SettingsIcon />
       </IconButton>
-      <Tabs className={classes.tabs} value={tabValue} onChange={handleChange} TabIndicatorProps={{style: {display: "none"}}} centered>
+      <Tabs className={classes.tabs} value={tabValue} onChange={handleChange} TabIndicatorProps={{style: {display: "none"}}} centered >
         <Tab className={classes.tab} label="rappu" />
-        <Tab className={tabValue === 1 ? classes.selectedTab : classes.tab} icon={<JazzuIcon />} />
+        <Tab className={tabValue === 1 ? classes.selectedTab : classes.tab} icon={<JazzuIcon />} disableRipple />
       </Tabs>
       <Box className={classes.dateField}>
         {date}
