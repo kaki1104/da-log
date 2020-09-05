@@ -8,16 +8,23 @@ type Props = {
 const useStyles = makeStyles((theme) => {
   return {
     root: {
-      // width: '100%',
-      padding: '24px 36px 24px ',
       justifyContent: 'center',
       alignItems: 'center',
     },
     container: {
-      // width: '100%',
+      position: 'absolute',
+      top: '120px',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-around',
+      width: '1000px',
+      height:'75vh',
+      margin: '0px 24px 8px 24px',
+      padding: '10px',
+      background: '#FDFBF4',
+      borderRadius: '20px',
+      boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+      // filter: 'drop-shadow(-10px 10px 10px rgba(0, 0, 0, 0.25))',
     }
   };
 });
