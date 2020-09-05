@@ -1,34 +1,34 @@
 import React from 'react';
-import { makeStyles, Box, AppBar, Toolbar } from '@material-ui/core';
+import { makeStyles} from '@material-ui/core';
 
 type Props = {
+  left?: boolean;
   text: string;
 };
 const useStyles = makeStyles((theme) => {
   return {
-    root: {
-      width: '300px',
+    leftRoot: {
+      width: '330px',
+      height: '200px',
       background: `#FFFFFF;`,
-      borderRadius: '16px 0 0 0',
-      padding: '4px 0px',
+      borderRadius: '24px 24px 24px 0px',
+      padding: '24px',
     },
-    text: {
-      color: 'black',
-      fontSize: '16px',
-      fontWeight: 'bold',
-      lineHeight: '40px',
-      letterSpacing: 0.25,
-    },
+    rightRoot: {
+      width: '330px',
+      height: '200px',
+      background: `#FFFFFF;`,
+      borderRadius: '24px 24px 0px 24px',
+      padding: '24px',
+    }
   };
 });
 
-const Entry: React.FC<Props> = ({ text }: Props) => {
+const Entry: React.FC<Props> = ({ left=false, text }: Props) => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <Box className ={classes.text}>
-        hi
-      </Box>
+    <div className={left ? classes.leftRoot : classes.rightRoot}>
+      {text}
     </div>
   );
 };

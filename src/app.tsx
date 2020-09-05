@@ -1,12 +1,25 @@
 import React from 'react';
-import { Box } from '@material-ui/core';
 import MainHeader from './components/main-header.tsx';
+import DiaryContent from './components/diary-content';
+import ThemesContent from './components/themes-content';
+import { makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => {
+  return {
+    root: {
+      background: `#E1DAC9`,
+      height: '100vh',
+    },
+  };
+});
 
 const App: React.FC = () => {
+  const classes = useStyles();
+  const [tabValue, setTabValue] = React.useState(1);
   return (
-    <div>
-      <MainHeader />
-      <Box>da log is here! hehe</Box>
+    <div className={classes.root}>
+      <MainHeader tabValue={tabValue} setTabValue={setTabValue}/>
+      {tabValue === 1 ? <DiaryContent /> : <ThemesContent />}
     </div>
   );
 };

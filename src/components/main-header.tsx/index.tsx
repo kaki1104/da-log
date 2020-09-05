@@ -4,6 +4,10 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { monthNames } from '../../constants';
 
+type Props = {
+  tabValue: number;
+  setTabValue: (value: number) => void;
+};
 const useStyles = makeStyles((theme) => {
   return {
     root: {
@@ -12,7 +16,6 @@ const useStyles = makeStyles((theme) => {
       alignItems: 'center',
       height: '100px',
       background: '#D8C3A5',
-      borderRadius: '36px 0 0 0',
       padding: '5px 20px 0px 40px',
     },
     settingsButton: {
@@ -20,13 +23,13 @@ const useStyles = makeStyles((theme) => {
     },
     tab: {
       margin: '0px 20px 0px 40px',
-      width: '600px',
+      width: '500px',
     },
     dateField: {
       width: '160px',
       padding: '10px',
       margin: '10px',
-      background: 'pink',
+      background: '#f0d8ee',
     },
     notificationsButton: {
       position: 'absolute',
@@ -35,20 +38,19 @@ const useStyles = makeStyles((theme) => {
   };
 });
 
-const MainHeader: React.FC = () => {
+const MainHeader: React.FC<Props> = ({ tabValue, setTabValue }: Props) => {
   const classes = useStyles();
-  const [value, setValue] = React.useState(1);
   const today = new Date();
   const date = monthNames[today.getMonth()] + ' ' + today.getDate() + ', ' + today.getFullYear();
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-    setValue(newValue);
+    setTabValue(newValue);
   };
   return (
     <Box className={classes.root}>
       <IconButton className={classes.settingsButton}>
         <SettingsIcon />
       </IconButton>
-      <Tabs className={classes.tab} value={value} onChange={handleChange} centered>
+      <Tabs className={classes.tab} value={tabValue} onChange={handleChange} centered>
         <Tab label="rappu" />
         <Tab label="jazzu" />
       </Tabs>
