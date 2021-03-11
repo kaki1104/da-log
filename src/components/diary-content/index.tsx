@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { makeStyles, Box } from '@material-ui/core';
 import Entry from '../entry';
 import EntryTextArea from '../entry-text-area';
+import Calendar from '../calendar';
 
 type Props = {
   text: string;
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme) => {
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
-      width: '1000px',
+      width: '80vw',
       height:'75vh',
       margin: '0px 24px 8px 24px',
       padding: '10px',
@@ -27,6 +28,13 @@ const useStyles = makeStyles((theme) => {
       boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
       overflowY: 'scroll',
       // filter: 'drop-shadow(-10px 10px 10px rgba(0, 0, 0, 0.25))',
+    },
+    widgetContainer: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignContent: 'center',
+      width: '900px',
     },
     logField:{
       display: 'flex',
@@ -70,6 +78,9 @@ const DiaryContent: React.FC = () => {
   return (
     <div className={classes.root}>
       <Box className={classes.container}>
+        <Box className={classes.widgetContainer}>
+          <Calendar />
+        </Box>
         <Box className={classes.logField}>
           <Box className={classes.logContainer}>
             <Box className={classes.date}>date</Box>
