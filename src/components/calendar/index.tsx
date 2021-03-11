@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { makeStyles, Box } from '@material-ui/core';
+import { monthNamesAbr } from '../../constants';
+
 
 type Props = {
   text: string;
@@ -85,6 +87,7 @@ const useStyles = makeStyles((theme) => {
 
 const Calendar: React.FC = () => {
   const classes = useStyles();
+  const today = new Date();
   const messagesEndRef = useRef<HTMLDivElement>(document.createElement("div"));
   const scrollToBottom = () => {
     if (messagesEndRef === null) return;
@@ -105,10 +108,10 @@ const Calendar: React.FC = () => {
         </Box>
 
         <Box className={classes.monthContainer}>
-          aug
+          {monthNamesAbr[today.getMonth()]}
         </Box>
         <Box className={classes.dayContainer}>
-          20
+          {today.getDate()}
         </Box>
       </Box>
     </div>
