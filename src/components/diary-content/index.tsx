@@ -62,7 +62,7 @@ const DiaryContent: React.FC = () => {
   const messagesEndRef = useRef<HTMLDivElement>(document.createElement("div"));
   const scrollToBottom = () => {
     if (messagesEndRef === null) return;
-    messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+    messagesEndRef.current.scrollIntoView({ behavior: "auto" }) //change the smooth if we want scrolling effect
   };
   useEffect(() => {
     scrollToBottom()

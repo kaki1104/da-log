@@ -4,7 +4,7 @@ import DiaryContent from './components/diary-content';
 import ThemesContent from './components/themes-content';
 import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => {
+const useStyles = makeStyles(() => {
   return {
     root: {
       background: `#E1DAC9`,
