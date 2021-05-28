@@ -25,6 +25,8 @@ const useStyles = makeStyles((theme) => {
       lineHeight: '16px',
       color: 'black',
       padding: '24px',
+      fontFamily: 'Nunito',
+      fontWeight: 'bold',
     },
     textfieldFocused: {
       outline: 'none',
