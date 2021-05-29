@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from 'react';
 import { makeStyles, Box } from '@material-ui/core';
 import Entry from '../entry';
 import EntryTextArea from '../entry-text-area';
+import Calendar from '../calendar';
+import pageLines from './pagelines.png';
 
 type Props = {
   text: string;
@@ -18,23 +20,33 @@ const useStyles = makeStyles((theme) => {
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
-      width: '1000px',
-      height:'75vh',
+      width: '80vw',
+      height:'750px',
       margin: '0px 24px 8px 24px',
       padding: '10px',
       background: '#FDFBF4',
+      backgroundImage:`url(${pageLines})`,
+      backgroundRepeat: 'repeat-x',
+      backgroundPosition: '0px 100px, center',
       borderRadius: '20px',
       boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-      overflowY: 'scroll',
       // filter: 'drop-shadow(-10px 10px 10px rgba(0, 0, 0, 0.25))',
     },
-    logField:{
+    widgetContainer: {
       display: 'flex',
       flexDirection: 'column',
-      width: '900px',
+      justifyContent: 'center',
+      alignContent: 'center',
+      width: '120px',
     },
-    date:{
-      margin: '20px'
+    logField:{
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'column',
+      width: '80%',
+      overflowY: 'scroll',
+      fontFamily: 'Nunito',
+      fontWeight: 'bold',
     },
     scrollField:{
       width: '50px',
@@ -42,14 +54,18 @@ const useStyles = makeStyles((theme) => {
     logContainer:{
       display: 'flex',
       flexDirection: 'row',
-      justifyContent: 'space-between',
+      justifyContent: 'center',
       margin: '20px',
+    },
+    innerMargin: {
+      minWidth: '30px',
+      maxWidth: '30px',
     },
     newEntryContainer:{
       position: 'relative',
       display: 'flex',
       flexDirection: 'row',
-      justifyContent: 'space-between',
+      justifyContent: 'center',
       bottom: '40px',
       height: '100px',
       margin: '40px 20px',
@@ -70,20 +86,23 @@ const DiaryContent: React.FC = () => {
   return (
     <div className={classes.root}>
       <Box className={classes.container}>
+        <Box className={classes.widgetContainer}>
+          <Calendar />
+        </Box>
         <Box className={classes.logField}>
           <Box className={classes.logContainer}>
-            <Box className={classes.date}>date</Box>
             <Entry left text="seba is da cool"/>
+            <div className={classes.innerMargin}/>
             <Entry text="kaki loves seba mucho mucho"/>
           </Box>
           <Box className={classes.logContainer}>
-            <Box className={classes.date}>date</Box>
             <Entry left text="seba is da cool"/>
+            <div className={classes.innerMargin}/>
             <Entry text="kaki loves seba mucho mucho"/>
           </Box>
           <Box className={classes.newEntryContainer}>
-            <Box className={classes.date}>date</Box>
             <EntryTextArea />
+            <div className={classes.innerMargin}/>
             <EntryTextArea />
           </Box>
           <div ref={messagesEndRef} />
