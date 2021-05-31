@@ -8,36 +8,31 @@ import pageLines from './pagelines.png';
 type Props = {
   text: string;
 };
-const useStyles = makeStyles((theme) => {
+const useStyles = makeStyles(() => {
   return {
     root: {
       justifyContent: 'center',
       alignItems: 'center',
     },
     container: {
-      position: 'absolute',
-      top: '120px',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
-      width: '80vw',
-      height:'80vh',
+      width: '95vw',
+      height:'85vh',
       margin: '0px 24px 8px 24px',
-      // padding: '10px',
       background: '#FDFBF4',
       backgroundImage:`url(${pageLines})`,
       backgroundRepeat: 'repeat-x',
       backgroundPosition: '0px 100px, center',
       borderRadius: '20px',
       boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-      // filter: 'drop-shadow(-10px 10px 10px rgba(0, 0, 0, 0.25))',
     },
     widgetContainer: {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignContent: 'center',
-      width: '120px',
     },
     logField:{
       position: 'relative',

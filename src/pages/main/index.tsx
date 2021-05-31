@@ -7,8 +7,7 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles(() => {
   return {
     root: {
-      background: `#E1DAC9`,
-      height: '100vh',
+      background: `linear-gradient(to bottom, #D8C3A5 15%, #E1DAC9 15%)`,
     },
   };
 });

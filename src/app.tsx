@@ -7,6 +7,8 @@ const useStyles = makeStyles(() => {
     root: {
       background: `#E1DAC9`,
       height: '100vh',
+      margin: '0px !important',
+      padding: '0px',
     },
   };
 });
