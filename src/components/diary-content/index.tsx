@@ -91,9 +91,9 @@ const DiaryContent: React.FC = () => {
             <Entry text="kaki loves seba mucho mucho"/>
           </Box>
           <Box className={classes.logContainer}>
-            <Entry left text="seba is da cool"/>
+            <Entry left text="I felt sad today."/>
             <div className={classes.innerMargin}/>
-            <Entry text="kaki loves seba mucho mucho"/>
+            <Entry text="today was a good day."/>
           </Box>
           <Box className={classes.newEntryContainer}>
             <EntryTextArea />
