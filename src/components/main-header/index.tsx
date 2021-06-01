@@ -1,7 +1,8 @@
 import React from 'react';
-import { makeStyles, Box, IconButton, Tabs, Tab } from '@material-ui/core';
+import { makeStyles, Box, IconButton, Tabs, Tab} from '@material-ui/core';
 import SettingsIcon from '@material-ui/icons/Settings';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import JazzuIcon from "../../assets/jazzu.png";
 
 type Props = {
   tabValue: number;
@@ -52,8 +53,8 @@ const MainHeader: React.FC<Props> = ({ tabValue, setTabValue }: Props) => {
       <Tabs className={classes.tabs} value={tabValue} onChange={handleChange} TabIndicatorProps={{style: {display: "none"}}} centered >
         <Tab className={tabValue === 0 ? classes.selectedTab: classes.tab} label="rappu" disableRipple />
         <Tab className={tabValue === 1 ? classes.selectedTab: classes.tab}
-            icon={<img alt="jazzu" height="40px" width="70px" src={require("../../icons/jazzu-icon/jazzu.png")} />} disableRipple />
-      </Tabs> 
+            icon={<img alt="jazzu" height="40px" width="70px" src={JazzuIcon} />} disableRipple />
+      </Tabs>
       <Box className={classes.iconField}>
         <IconButton>
           <NotificationsIcon />
