@@ -5,9 +5,9 @@ import EntryTextArea from '../entry-text-area';
 import Calendar from '../calendar';
 import pageLines from './pagelines.png';
 
-type Props = {
-  text: string;
-};
+// type Props = {
+//   id: number;
+// };
 const useStyles = makeStyles(() => {
   return {
     root: {

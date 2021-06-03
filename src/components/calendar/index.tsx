@@ -2,10 +2,6 @@ import React, { useRef, useEffect } from 'react';
 import { makeStyles, Box } from '@material-ui/core';
 import { monthNamesAbr } from '../../constants';
 
-
-type Props = {
-  text: string;
-};
 const useStyles = makeStyles((theme) => {
   return {
     root: {
