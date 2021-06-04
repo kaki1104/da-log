@@ -59,24 +59,18 @@ const useStyles = makeStyles((theme) => {
       justifyContent: 'space-around',
       alignItems: 'center',
       width: '90px',
-      //margin: '0px 24px 8px 24px',
-      // padding: '0px 20px 10px 20px',
     },
     calendarClip1: {
-      // position: 'absolute',
       width: '7px',
       height:'15px',
       background: '#C4C4C4',
       borderRadius: '5px 5px 5px 5px',
-      //boxShadow: '-5px 8px 1px rgba(0, 0, 0, 0.25)',
     },
     calendarClip2: {
-      // position: 'absolute',
       width: '7px',
       height:'15px',
       background: '#C4C4C4',
       borderRadius: '5px 5px 5px 5px',
-      //boxShadow: '-5px 8px 1px rgba(0, 0, 0, 0.25)',
     },
   };
 });
