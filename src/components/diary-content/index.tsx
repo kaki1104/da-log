@@ -86,19 +86,19 @@ const DiaryContent: React.FC = () => {
         </Box>
         <Box className={classes.logField}>
           <Box className={classes.logContainer}>
-            <Entry left text="seba is da cool"/>
+            <Entry left text="今日はこういうことがありました"/>
             <div className={classes.innerMargin}/>
-            <Entry text="kaki loves seba mucho mucho"/>
+            <Entry text="I did some work on my project."/>
           </Box>
           <Box className={classes.logContainer}>
-            <Entry left text="I felt sad today."/>
+            <EntryTextArea content="today was fine"/>
             <div className={classes.innerMargin}/>
-            <Entry text="today was a good day."/>
+            <EntryTextArea ownEntry content=""/>
           </Box>
           <Box className={classes.newEntryContainer}>
-            <EntryTextArea />
+            <EntryTextArea content="today was fine"/>
             <div className={classes.innerMargin}/>
-            <EntryTextArea />
+            <EntryTextArea ownEntry content="this is my own entry"/>
           </Box>
           <div ref={messagesEndRef} />
         </Box>
