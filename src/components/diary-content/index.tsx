@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { makeStyles, Box } from '@material-ui/core';
 import Entry from '../entry';
-import EntryTextArea from '../entry-text-area';
 import Calendar from '../calendar';
 import pageLines from './pagelines.png';
 
@@ -86,19 +85,19 @@ const DiaryContent: React.FC = () => {
         </Box>
         <Box className={classes.logField}>
           <Box className={classes.logContainer}>
-            <Entry left text="今日はこういうことがありました"/>
+            <Entry content="今日はこういうことがありました"/>
             <div className={classes.innerMargin}/>
-            <Entry text="I did some work on my project."/>
+            <Entry ownEntry content="I did some work on my project."/>
           </Box>
           <Box className={classes.logContainer}>
-            <EntryTextArea content="today was fine"/>
+            <Entry content="today was fine"/>
             <div className={classes.innerMargin}/>
-            <EntryTextArea ownEntry content=""/>
+            <Entry ownEntry content=""/>
           </Box>
           <Box className={classes.newEntryContainer}>
-            <EntryTextArea content="today was fine"/>
+            <Entry content="today was fine"/>
             <div className={classes.innerMargin}/>
-            <EntryTextArea ownEntry content="this is my own entry"/>
+            <Entry ownEntry content="this is my own entry"/>
           </Box>
           <div ref={messagesEndRef} />
         </Box>
