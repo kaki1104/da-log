@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, Box, IconButton, Tabs, Tab} from '@material-ui/core';
 import SettingsIcon from '@material-ui/icons/Settings';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import JazzuIcon from "../../assets/jazzu.png";
+import JazzuIcon from "../../assets/icons/jazzu.png";
 
 type Props = {
   tabValue: number;
