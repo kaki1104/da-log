@@ -1,0 +1,13 @@
+/Users/kakiso/Desktop/Personal/da-log/server/target/debug/deps/pear-08615a06e3203704.rmeta: /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/lib.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/macros.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/input.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/result.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/debug.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/combinators.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/parsers.rs
+
+/Users/kakiso/Desktop/Personal/da-log/server/target/debug/deps/libpear-08615a06e3203704.rlib: /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/lib.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/macros.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/input.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/result.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/debug.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/combinators.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/parsers.rs
+
+/Users/kakiso/Desktop/Personal/da-log/server/target/debug/deps/pear-08615a06e3203704.d: /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/lib.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/macros.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/input.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/result.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/debug.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/combinators.rs /Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/parsers.rs
+
+/Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/lib.rs:
+/Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/macros.rs:
+/Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/input.rs:
+/Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/result.rs:
+/Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/debug.rs:
+/Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/combinators.rs:
+/Users/kakiso/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/parsers.rs:
