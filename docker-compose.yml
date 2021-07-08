@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  web:
+  client:
     build: ./client
     volumes:
       - ./client:/usr/src/app
@@ -9,9 +9,9 @@ services:
       - "3000:3000"
     command: bash -c "yarn && yarn start"
     links:
-      - api_server
+      - server
 
-  api_server:
+  server:
     build: ./server
     ports: 
       - "3001:3001"

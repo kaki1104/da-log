@@ -1,39 +1,48 @@
-#![feature(proc_macro_hygiene, decl_macro)]
+#![feature(plugin)]
 
-#[macro_use]
 extern crate rocket;
-
 #[macro_use]
 extern crate rocket_contrib;
 
-// #[macro_use]
+#[macro_use]
+extern crate serde_derive;
+
+#[macro_use]
 extern crate diesel;
+#[macro_use]
+extern crate diesel_codegen;
+extern crate lazy_static;
+extern crate dotenv;
+extern crate r2d2;
+extern crate r2d2_diesel;
+
+mod pg_pool;
+pub use pg_pool::DbConn;
 
 mod schema;
-// mod models;
+mod models;
+mod posts;
 
-use rocket::request::Request;
-use rocket_contrib::databases::diesel::PgConnection;
+use dotenv::dotenv;
+use std::env;
 
 #[get("/")]
-fn index(_db_conn: RustyDbConn) -> &'static str {
-    // Rocket uses the RustyDbConn request guard to provide us with a database
-    // connection from a managed pool.
-    "Hello, from Rust! (with a database connection!)"
+fn index() -> &'static str {
+    "Hello, world!"
 }
-
-#[catch(503)]
-fn service_not_available(_req: &Request) -> &'static str {
-    "Service is not available. (Is the database up?)"
-}
-
-#[database("rustydb")]
-pub struct RustyDbConn(PgConnection);
 
 fn main() {
+    // initialize env
+    dotenv().ok();
+
+    let database_url = env::var("DATABASE_URL").expect("DATABASE_URL must be set");
+
     rocket::ignite()
-        .attach(RustyDbConn::fairing())
-        .register(catchers![service_not_available])
+        .manage(pg_pool::init(&database_url))
         .mount("/api", routes![index])
+        .mount(
+            "/api/post",
+            routes![posts::index, posts::create, posts::publish, posts::delete],
+        )
         .launch();
 }

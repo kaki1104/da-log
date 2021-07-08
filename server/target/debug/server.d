@@ -1,1 +1,1 @@
-/Users/kakiso/Desktop/Personal/da-log/server/target/debug/server: /Users/kakiso/Desktop/Personal/da-log/server/src/main.rs /Users/kakiso/Desktop/Personal/da-log/server/src/schema.rs
+/usr/src/app/target/debug/server: /usr/src/app/src/main.rs /usr/src/app/src/schema.rs

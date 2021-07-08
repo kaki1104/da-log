@@ -7,9 +7,12 @@ edition = "2018"
 
 [dependencies]
 rocket = "0.4.10"
+rocket_codegen = "0.4.10"
 diesel = { version = "1.4.1", features = ["postgres"] }
+diesel_codegen = { version = "0.16.1", features = ["postgres"] }
 serde = "1.0"
 serde_derive = "1.0"
+sqlx = { version = "*", features = [ "chrono" ] }
 
 [dependencies.rocket_contrib]
 version = "*"
