@@ -11,6 +11,16 @@ pub struct User {
 }
 
 #[derive(Queryable, Serialize, Debug)]
+pub struct Diary {
+    pub id: i32,
+    pub title: String,
+    pub description: String,
+    pub created_user_id: i32;
+    pub created_at: chrono::DateTime<chrono::Utc>,
+    pub updated_at: chrono::DateTime<chrono::Utc>,
+}
+
+#[derive(Queryable, Serialize, Debug)]
 pub struct Entry {
     pub id: i32,
     pub body: String,
@@ -21,15 +31,13 @@ pub struct Entry {
 }
 
 #[derive(Queryable, Serialize, Debug)]
-pub struct Diary {
+pub struct Hashtag {
     pub id: i32,
-    pub title: String,
-    pub description: String,
-    pub created_user_id: i32;
+    pub name: String,
+    pub color: String,
     pub created_at: chrono::DateTime<chrono::Utc>,
     pub updated_at: chrono::DateTime<chrono::Utc>,
 }
-
 
 #[derive(Insertable, Deserialize, Debug)]
 #[table_name = "posts"]
